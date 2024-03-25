@@ -1,0 +1,59 @@
+.ibrance-banner-wrapper {
+  .ibrance-banner {
+    position: relative;
+    min-height: 400px;
+
+    & > div {
+      position: relative;
+      z-index: 1;
+      min-height: 395px;
+      @media (max-width: 500px) {
+        min-height: 122px;
+      }
+      & > div {
+        position: absolute;
+        &:first-child {
+          z-index: 9;
+          width: 50%;
+          height: 100%;
+          padding: 0 30px;
+          overflow: hidden;
+          display: flex;
+          align-items: flex-start;
+          flex-direction: column;
+          justify-content: center;
+          &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: inherit;
+            top: 0;
+            left: 0%;
+            overflow: hidden;
+            background: #f2f0f5cc;
+            clip-path: polygon(0% 0%, 100% 0%, 65% 100%, 0 100%);
+          }
+
+          h1 {
+            font-size: 2.25rem;
+            color: #430098;
+            max-width: 72%;
+            word-break: keep-all;
+            margin-top: 0;
+            margin-bottom: 0;
+            z-index: 2;
+            position: relative;
+            @media (max-width: 500px) {
+              font-size: 1rem;
+              color: #430098;
+              max-width: 100%;
+            }
+          }
+        }
+      }
+    }
+    @media (max-width: 500px) {
+      min-height: 122px;
+    }
+  }
+}

@@ -12,3 +12,86 @@ footer .footer {
 footer .footer p {
   margin: 0;
 }
+.footerarea-wrapper {
+  .footerarea {
+    & > div {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
+      font-size: 14px;
+      a:any-link {
+        color: #773384;
+        text-decoration: underline;
+      }
+      p {
+        color: #773384;
+      }
+      @media (max-width: 900px) {
+        flex-direction: column;
+        align-items: center;
+      }
+      & > div {
+        /* flex: 0 0 50%; */
+        p {
+          text-align: center;
+
+          &.button-container {
+            a.button:any-link,
+            button {
+              font-family: var(--body-font-family);
+              display: inline-block;
+              box-sizing: border-box;
+              text-decoration: underline;
+              border: 0px solid transparent;
+              padding: 0;
+              text-align: center;
+              font-style: normal;
+              font-weight: 400;
+              cursor: pointer;
+              color: #773384;
+              background-color: #035fe600;
+              margin: 0px 0px;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              border-radius: 0;
+              font-size: 14px;
+            }
+          }
+        }
+        &:nth-last-child(2) {
+          /* background-color: red; */
+          @media (max-width: 900px) {
+            /* align-self: end; */
+          }
+        }
+        &:last-child {
+          flex: 0 0 100%;
+          display: inline-flex;
+          gap: 20px;
+          @media (max-width: 900px) {
+            flex-direction: column;
+            align-items: flex-start;
+          }
+          p {
+            &:first-child {
+              @media (max-width: 900px) {
+                display: flex;
+                justify-content: space-between;
+                gap: 20px;
+                align-items: center;
+                width: 100%;
+              }
+            }
+            text-align: left;
+            color: #414141;
+            a:any-link {
+              color: #773384;
+            }
+          }
+        }
+      }
+    }
+  }
+}

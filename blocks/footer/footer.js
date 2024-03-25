@@ -18,4 +18,17 @@ export default async function decorate(block) {
   while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
 
   block.append(footer);
+  
+  let vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+  
+
+  if(vw <= 900){
+    console.log(vw);
+    const secLastElement = block.querySelector(".footerarea > div > div:nth-last-child(2) ");
+    console.log(secLastElement);
+    const lastElement = block.querySelector(".footerarea > div > div:last-child > p:first-child");
+    console.log(lastElement);
+    lastElement.appendChild(secLastElement);
+  }
+  
 }

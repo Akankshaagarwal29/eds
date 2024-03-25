@@ -1,0 +1,172 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.riskfactor-container {
+  padding: 0 !important;
+  z-index: 99;
+  margin-top: 0px;
+  position: relative;
+  margin-top: -7%;
+  @media (min-width: 768px) {
+    margin-top: -10%;
+  }
+  .riskfactor-wrapper {
+    .riskfactor {
+      width: 90%;
+      margin: auto;
+      background: #f3f1ed;
+      line-height: normal;
+      min-height: 212px;
+      padding: 0;
+      & > div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* height: 225px; */
+        @media (max-width: 767px) {
+          flex-direction: column;
+          gap: 20px;
+          height: max-content;
+        }
+        & > div {
+          text-align: center;
+          &:first-child {
+            filter: drop-shadow(2px 0px 2px rgba(0, 0, 0, 0.2));
+            @media (max-width: 767px) {
+              filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.2));
+              width: 100%;
+            }
+            @media (min-width: 900px) {
+              max-width: 335px;
+            }
+            div {
+              position: relative;
+              background: #fbfaf9;
+              clip-path: polygon(0% 0%, 88% 0, 100% 50%, 88% 100%, 0% 100%);
+              filter: drop-shadow(2px 0px 2px rgba(0, 0, 0, 0.2));
+              z-index: 9999;
+              min-height: 212px;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              @media (max-width: 767px) {
+                clip-path: polygon(0% 0%, 100% 0%, 104% 81%, 53% 98%, -59% 71%);
+                filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.2));
+              }
+            }
+            h2 {
+              font-size: 32px;
+              font-family: Lato;
+              font-weight: 600;
+              font-stretch: normal;
+              font-style: normal;
+              line-height: 35px;
+              letter-spacing: -0.34px;
+              text-align: left;
+              color: #783384;
+              padding: 0 35px;
+              @media (max-width: 767px) {
+                text-align: center;
+              }
+            }
+          }
+          &:not(:first-child) {
+            padding: 20px 10px;
+            @media (min-width: 900px) {
+              padding: 20px 50px;
+            }
+          }
+
+          &:nth-child(3) {
+            padding: 20px;
+            background-color: #d6d2ca;
+            border-radius: 50%;
+            padding: 12px;
+            text-transform: uppercase;
+            font-size: 16px;
+          }
+          p {
+            margin-bottom: 23px;
+          }
+          h3 {
+            font-size: 30.5px;
+            font-family: roboto-slab, serif;
+            font-weight: 600;
+            color: #363636;
+            margin-bottom: 0;
+            margin-top: 0;
+            text-align: center;
+            @media (min-width: 768px) {
+              font-size: 26.5px;
+              line-height: 30px;
+            }
+          }
+          p {
+            font-family: roboto-slab, serif;
+            font-size: 18px;
+            font-weight: 700;
+            text-align: center;
+            color: #630172;
+            line-height: 1.56;
+            letter-spacing: -0.18px;
+            margin-top: 0;
+            margin-bottom: 0;
+            &.button-container {
+              margin-top: 19px;
+              a.button:any-link,
+              button {
+                border-radius: 0;
+                font-family: var(--body-font-family);
+                display: inline-block;
+                text-decoration: none;
+                border: 0;
+                padding: 0;
+                text-align: unset;
+                font-style: normal;
+                color: var(--background-color);
+                background-color: var(--link-color);
+                margin: 0;
+                white-space: inherit;
+                overflow: unset;
+                text-overflow: unset;
+              }
+              a.button:any-link {
+                cursor: pointer;
+                height: 40px;
+                position: relative;
+                background: #783384;
+                color: rgb(255, 255, 255);
+                font-weight: 400;
+                font-size: 17px;
+                line-height: 40px;
+                padding: 0 10px;
+                &:after {
+                  border-left: 8px solid #783384;
+                }
+              }
+
+              a.button:after {
+                content: "";
+                position: absolute;
+                border-bottom: 20px solid transparent;
+                border-top: 20px solid transparent;
+                height: 0px;
+                width: 0px;
+                margin-right: -8px;
+                right: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

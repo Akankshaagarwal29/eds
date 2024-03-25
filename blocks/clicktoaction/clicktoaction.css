@@ -1,0 +1,63 @@
+.clicktoaction > div {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+  & > div {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    a:any-link {
+      font-size: 22px;
+      color: #000000;
+      font-weight: 700;
+      @media (min-width: 768px) {
+        font-size: 14px;
+      }
+      @media (min-width: 900px) {
+        font-size: 20px;
+      }
+    }
+
+    &.divider {
+      hr {
+        border-color: #000000;
+        width: 100vw;
+        border-color: #e8e4dc;
+        @media (min-width: 768px) {
+          width: auto;
+          height: 101px;
+          transform: rotate(15deg);
+        }
+      }
+    }
+    &:first-child a {
+      span {
+        border-left: 7px solid #40a66a;
+      }
+    }
+    &:nth-child(3) a {
+      span {
+        border-left: 7px solid rgb(148 74 153);
+      }
+    }
+
+    &:nth-child(5) a {
+      span {
+        border-left: 7px solid rgb(25 155 218);
+      }
+    }
+  }
+}
+.arrow-left {
+  border-top: 7px solid #19191900;
+  border-bottom: 7px solid #ffffff00;
+  display: inline-block;
+  border-left: 7px solid #000000;
+  margin-left: 3px;
+}

@@ -1,0 +1,97 @@
+.knowthedifference-wrapper {
+  .knowthedifference {
+    & > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      @media (min-width: 900px) {
+        flex-direction: row;
+      }
+      & > div:first-child {
+        @media (min-width: 900px) {
+          width: 65%;
+        }
+      }
+      & > div:last-child {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        h2 {
+          font-size: 18.5px;
+          line-height: 22px;
+          @media (min-width: 900px) {
+            font-size: 34px;
+            line-height: 45px;
+          }
+        }
+
+        p {
+          font-size: 16px;
+          line-height: 22px;
+
+          @media (min-width: 900px) {
+            font-size: 20px;
+            font-weight: 400;
+          }
+          &.button-container {
+            a.button:any-link,
+            button {
+              border-radius: 0;
+              font-family: var(--body-font-family);
+              display: inline-flex;
+              align-items: center;
+              text-decoration: none;
+              border: 0;
+              padding: 0;
+              text-align: unset;
+              font-style: normal;
+              color: var(--background-color);
+              background-color: var(--link-color);
+              margin: 0;
+              white-space: inherit;
+              overflow: unset;
+              text-overflow: unset;
+            }
+            a.button {
+              cursor: pointer !important;
+              height: 40px !important;
+              position: relative !important;
+              background: #783384 !important;
+              color: rgb(255, 255, 255) !important;
+              font-weight: 400 !important;
+              font-size: 12px;
+              line-height: 15px;
+              padding: 0 10px !important;
+              &:after {
+                /* triangle hover color */
+                border-left: 8px solid #783384;
+              }
+              @media (min-width: 601px) {
+                font-size: 16px;
+                line-height: 18px;
+              }
+              @media (min-width: 992px) {
+                font-size: 21px;
+                line-height: 40px;
+              }
+            }
+
+            a.button:after {
+              /*  the triangle */
+              content: "";
+              position: absolute;
+              border-bottom: 20px solid transparent;
+              border-top: 20px solid transparent;
+              height: 0px;
+              width: 0px;
+              margin-right: -8px;
+              right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
