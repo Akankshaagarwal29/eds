@@ -81,7 +81,6 @@ body.appear {
 }
 
 header {
-  /* height: var(--nav-height); */
   height: 98px;
   @media (width<=900px) {
     height: 120px;
