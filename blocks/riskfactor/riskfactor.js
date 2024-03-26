@@ -1,4 +1,4 @@
-export default function decorate(block){
+export default function decorate(block) {
   const container = block.querySelector('.riskfactor > div:first-child');
   const divElement = document.createElement('div');
   container.prepend(divElement);
