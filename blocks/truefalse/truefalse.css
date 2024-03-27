@@ -1,36 +1,38 @@
 .truefalse-wrapper {
   clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 0% 100%, 4% 50%, 0% 0%);
+
   .truefalse {
     background-color: #e8e4dc;
-
     color: #672c72;
     position: relative;
-
     padding: 30px;
+
     & > div {
       width: 90%;
       margin: auto;
+
+      & > div {
+        &.select-true-false {
+          display: flex;
+          justify-content: end;
+          width: 40%;
+
+          label {
+            padding-right: 30px;
+            font-weight: 700;
+            padding-left: 10px;
+          }
+        }
+      }
+
       &:nth-child(2) {
         display: flex;
         gap: 50px;
         justify-content: space-between;
         align-items: center;
 
-        @media (max-width: 767px) {
+        @media (width <= 767px) {
           flex-direction: column;
-        }
-      }
-
-      & > div {
-        &.select__trueFalse {
-          display: flex;
-          justify-content: end;
-          width: 40%;
-          label {
-            padding-right: 30px;
-            font-weight: 700;
-            padding-left: 10px;
-          }
         }
       }
     }

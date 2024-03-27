@@ -11,31 +11,37 @@
   > div {
     position: relative;
     height: 600px;
-    @media (width<600px) {
-      height: 60vh;
+
+    @media (width < 600px) {
+      height: 100vh;
     }
-    @media (min-width: 600px) {
+
+    @media (width >= 600px) {
       height: 300px;
     }
-    @media (min-width: 801px) {
+
+    @media (width >= 801px) {
       height: 400px;
     }
-    @media (min-width: 900px) {
+
+    @media (width >= 900px) {
       height: 500px;
     }
+
     > div {
       position: absolute;
     }
+
     & > :first-child {
-      /* background-color: #783384; */
       width: 100%;
       height: inherit;
+
       img {
         height: 100%;
         width: 100%;
-        /* object-fit: cover; */
       }
     }
+
     > :last-child {
       width: 50%;
       height: inherit;
@@ -44,15 +50,16 @@
       flex-direction: column;
       justify-content: center;
       gap: 20px;
-      @media (max-width: 600px) {
+
+      @media (width <= 600px) {
         width: 60%;
       }
+
       h1 {
         margin: 0;
         text-transform: uppercase;
         font-weight: 700;
         font-stretch: normal;
-        font-style: normal;
         letter-spacing: -0.5px;
         font-size: 17px;
         line-height: 20px;
@@ -62,22 +69,49 @@
           font-size: 25px;
           line-height: 30px;
         }
-        @media (min-width: 992px) {
+
+        @media (width >= 992px) {
           font-size: 50px;
           line-height: 1;
         }
       }
+
       p {
         font-size: 14px;
-        @media (min-width: 601px) {
+
+        @media (width >= 601px) {
           font-size: 16px;
           line-height: 18px;
         }
-        @media (min-width: 992px) {
+
+        @media (width >= 992px) {
           font-size: 20px;
           line-height: 30px;
         }
+
         &.button-container {
+          a.button {
+            cursor: pointer !important;
+            height: 40px !important;
+            position: relative !important;
+            background: #783384 !important;
+            color: #fff !important;
+            font-weight: 400 !important;
+            font-size: 12px;
+            line-height: 15px;
+            padding: 0 10px !important;
+
+            @media (width >= 601px) {
+              font-size: 16px;
+              line-height: 18px;
+            }
+
+            @media (width >=992px) {
+              font-size: 21px;
+              line-height: 40px;
+            }
+          }
+
           a.button:any-link,
           button {
             border-radius: 0;
@@ -88,7 +122,6 @@
             border: 0;
             padding: 0;
             text-align: unset;
-            font-style: normal;
             color: var(--background-color);
             background-color: var(--link-color);
             margin: 0;
@@ -96,38 +129,15 @@
             overflow: unset;
             text-overflow: unset;
           }
-          a.button {
-            cursor: pointer !important;
-            height: 40px !important;
-            position: relative !important;
-            background: #783384 !important;
-            color: rgb(255, 255, 255) !important;
-            font-weight: 400 !important;
-            font-size: 12px;
-            line-height: 15px;
-            padding: 0 10px !important;
-            &:after {
-              /* triangle hover color */
-              border-left: 8px solid #783384;
-            }
-            @media (min-width: 601px) {
-              font-size: 16px;
-              line-height: 18px;
-            }
-            @media (min-width: 992px) {
-              font-size: 21px;
-              line-height: 40px;
-            }
-          }
 
-          a.button:after {
-            /*  the triangle */
+          a.button::after {
+            border-left: 8px solid #783384;
             content: "";
             position: absolute;
             border-bottom: 20px solid transparent;
             border-top: 20px solid transparent;
-            height: 0px;
-            width: 0px;
+            height: 0;
+            width: 0;
             margin-right: -8px;
             right: 0;
           }
@@ -135,11 +145,13 @@
       }
     }
   }
+
   &.take-action-banner {
     & > div {
-      @media (min-width: 900px) {
+      @media (width >=900px) {
         height: 349px;
       }
+
       & > :last-child {
         h1 {
           font-size: 40px;

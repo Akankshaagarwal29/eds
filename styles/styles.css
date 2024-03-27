@@ -9,12 +9,14 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
-@import "./default.css";
+@import url("./default.css");
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+
 :root {
   /* colors */
   --link-color: #035fe6;
@@ -82,6 +84,7 @@ body.appear {
 
 header {
   height: 98px;
+
   @media (width<=900px) {
     height: 120px;
   }
@@ -104,18 +107,23 @@ h6 {
 h1 {
   font-size: var(--heading-font-size-xxl);
 }
+
 h2 {
   font-size: var(--heading-font-size-xl);
 }
+
 h3 {
   font-size: var(--heading-font-size-l);
 }
+
 h4 {
   font-size: var(--heading-font-size-m);
 }
+
 h5 {
   font-size: var(--heading-font-size-s);
 }
+
 h6 {
   font-size: var(--heading-font-size-xs);
 }
@@ -247,15 +255,6 @@ main .section.highlight {
   background-color: var(--light-color);
 }
 
-p,
-dl,
-ol,
-ul,
-pre,
-blockquote {
-  margin-top: 0em;
-  margin-bottom: 0em;
-}
 footer {
   margin-top: auto;
   margin-bottom: 0;

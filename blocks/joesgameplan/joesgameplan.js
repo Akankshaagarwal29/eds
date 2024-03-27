@@ -1,6 +1,6 @@
 export default function decorate(block) {
   const videoSection = block.querySelector('.joesgameplan > div > div:first-child');
-  videoSection.classList.add('videoContainer');
+  videoSection.classList.add('video-container');
   videoSection.removeChild(videoSection.firstElementChild);
   const video = document.createElement('video');
   // Set video attributes
@@ -11,24 +11,24 @@ export default function decorate(block) {
   video.muted = false;
   videoSection.appendChild(video);
   const txtContent = block.querySelector('.joesgameplan > div > div:nth-child(2)');
-  txtContent.classList.add('txtContent');
+  txtContent.classList.add('txt-content');
   // txtContent.style.display = none;
   const transcript = block.querySelector('.joesgameplan > div:nth-child(2)');
-  transcript.classList.add('transcriptWrapper');
+  transcript.classList.add('transcript-wrapper');
   transcript.style.display = 'none';
-  const getAnchor = document.querySelector('.joesgameplan > div .videoContainer > p a');
+  const getAnchor = document.querySelector('.joesgameplan > div .video-container > p a');
   // console.log(getAnchor);
   getAnchor.setAttribute('id', 'toggleBtn');
   getAnchor.addEventListener('click', (event) => {
     event.preventDefault();
-    // let eleToToggle = document.getElementsByClassName('transcriptWrapper');
+    // let eleToToggle = document.getElementsByClassName('transcript-wrapper');
     if (transcript.style.display === 'none') {
       transcript.style.display = 'block';
-      getAnchor.parentNode.classList.add('blueBorder');
+      getAnchor.parentNode.classList.add('blue-border');
       getAnchor.innerHTML = 'Hide Transcript x';
     } else {
       transcript.style.display = 'none';
-      getAnchor.parentNode.classList.remove('blueBorder');
+      getAnchor.parentNode.classList.remove('blue-border');
       getAnchor.innerHTML = 'View Transcript';
     }
   });
@@ -39,7 +39,7 @@ export default function decorate(block) {
     ptxtContent.removeChild(ptxtContent.lastElementChild);
     const smallTxtContent = document.createElement('div');
     // const divNode = transcript.after(smallTxtContent);
-    smallTxtContent.classList.add('small-txtContenr');
+    // smallTxtContent.classList.add('small-txtcontent');
     smallTxtContent.appendChild(txtContent);
     // divNode.innerHTML = 'txtContent';
     // console.log(divNode);

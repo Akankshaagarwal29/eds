@@ -1,6 +1,6 @@
 export default function decorate(block) {
   const videoSection = block.querySelector('.whatispnemococcalpnemonia > div > div:last-child');
-  videoSection.classList.add('videoContainer');
+  videoSection.classList.add('video-container');
   videoSection.removeChild(videoSection.firstElementChild);
   const video = document.createElement('video');
   // Set video attributes
@@ -11,21 +11,21 @@ export default function decorate(block) {
   video.muted = false;
   videoSection.appendChild(video);
   const txtContent = block.querySelector('.whatispnemococcalpnemonia > div > div:first-child');
-  txtContent.classList.add('txtContent');
+  txtContent.classList.add('txt-content');
   const transcript = block.querySelector('.whatispnemococcalpnemonia > div+div');
-  transcript.classList.add('transcriptWrapper');
+  transcript.classList.add('transcript-wrapper');
   transcript.style.display = 'none';
-  const getAnchor = document.querySelector('.whatispnemococcalpnemonia > div .videoContainer > p a');
+  const getAnchor = document.querySelector('.whatispnemococcalpnemonia > div .video-container > p a');
   getAnchor.setAttribute('id', 'toggleBtn');
   getAnchor.addEventListener('click', (event) => {
     event.preventDefault();
     if (transcript.style.display === 'none') {
       transcript.style.display = 'block';
-      getAnchor.parentNode.classList.add('blueBorder');
+      getAnchor.parentNode.classList.add('blue-border');
       getAnchor.innerHTML = 'Hide Transcript x';
     } else {
       transcript.style.display = 'none';
-      getAnchor.parentNode.classList.remove('blueBorder');
+      getAnchor.parentNode.classList.remove('blue-border');
       getAnchor.innerHTML = 'View Transcript';
     }
   });

@@ -1,7 +1,7 @@
 export default function decorate(block) {
   const trueFalse = block.querySelector('.truefalse > div:nth-child(2) > div:nth-child(2)');
   // console.log(block);
-  trueFalse.classList.add('select__trueFalse');
+  trueFalse.classList.add('select-true-false');
   const trueRadio = document.createElement('input');
   trueRadio.type = 'radio';
   trueRadio.name = 'trueFalse';
